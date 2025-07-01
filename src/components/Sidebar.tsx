@@ -4,16 +4,15 @@ import React, { useState } from 'react'
 import {
   ChevronRight,
   BarChart3,
-  Radio,
-  Target,
   Settings,
   FileText,
   Zap,
-  Building,
+  Layers,
   Factory,
-  Wifi,
-  Signal,
-  FolderOpen
+  Waves,
+  Warehouse,
+  FolderOpen,
+  UtilityPole
 } from 'lucide-react'
 import { COLORS } from '../constants/colors'
 
@@ -28,18 +27,18 @@ const Sidebar: React.FC = () => {
     },
     {
       title: '上库区域',
-      icon: Radio,
+      icon: Waves,
       items: [],
       active: true
     },
     {
       title: '下库区域',
-      icon: Target,
+      icon: Waves,
       items: []
     },
     {
       title: '输水洞室',
-      icon: Building,
+      icon: Warehouse,
       items: []
     },
     {
@@ -54,7 +53,7 @@ const Sidebar: React.FC = () => {
     },
     {
       title: '输电线路',
-      icon: Signal,
+      icon: UtilityPole,
       items: []
     }
   ]
@@ -122,7 +121,7 @@ const Sidebar: React.FC = () => {
         {/* 材质库 Section Header */}
         <div className='p-3 border-t border-gray-200 border-b border-gray-200'>
           <div className='flex items-center space-x-2'>
-            <BarChart3 size={18} color={COLORS.PRIMARY_BLUE} />
+            <Layers size={18} color={COLORS.PRIMARY_BLUE} />
             <h2 className='text-base font-bold text-gray-700'>材质库</h2>
           </div>
         </div>
