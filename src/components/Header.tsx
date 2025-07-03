@@ -20,8 +20,8 @@ const Header: React.FC = () => {
   const getNavItemStyle = (path: string) => {
     const isActive = pathname === path
     return isActive
-      ? `flex items-center space-x-2 px-4 py-2 rounded text-white transition-colors`
-      : `flex items-center space-x-2 px-4 py-2 rounded hover:bg-gray-100 transition-colors text-gray-700`
+      ? `flex items-center space-x-2 px-4 py-2 rounded text-white`
+      : `flex items-center space-x-2 px-4 py-2 rounded hover:opacity-80 transition-opacity text-gray-800`
   }
 
   const getNavItemBackground = (path: string) => {
@@ -55,38 +55,35 @@ const Header: React.FC = () => {
             >
               <span className='text-base font-semibold'>天线下倾角计算</span>
             </Link>
-            <button
+            <Link
+              href='/rf-link'
               className={getNavItemStyle('/rf-link')}
               style={getNavItemBackground('/rf-link')}
             >
               <span className='text-base font-semibold'>射频链路计算</span>
-            </button>
-            <button
+            </Link>
+            <Link
+              href='/cable-loss'
               className={getNavItemStyle('/cable-loss')}
               style={getNavItemBackground('/cable-loss')}
             >
               <span className='text-base font-semibold'>电缆损耗</span>
-            </button>
-            <button
-              className={getNavItemStyle('/wireless-link')}
-              style={getNavItemBackground('/wireless-link')}
+            </Link>
+            <Link
+              href='/map'
+              className={getNavItemStyle('/map')}
+              style={getNavItemBackground('/map')}
             >
-              <span className='text-base font-semibold'>无线链路</span>
-            </button>
-            <button
-              className={getNavItemStyle('/interference')}
-              style={getNavItemBackground('/interference')}
-            >
-              <span className='text-base font-semibold'>干扰分析</span>
-            </button>
+              <span className='text-base font-semibold'>高程配置图</span>
+            </Link>
           </nav>
         </div>
         <div className='flex items-center space-x-4'>
-          <button className='flex items-center space-x-2 text-base font-semibold hover:text-blue-600 text-gray-700'>
+          <button className='flex items-center space-x-2 text-base font-semibold hover:opacity-80 hover:scale-105 hover:shadow-sm transition-all duration-300 transform text-gray-800'>
             <ArrowRightLeft size={16} />
             <span>切换项目</span>
           </button>
-          <button className='flex items-center space-x-2 text-base font-semibold hover:text-blue-600 text-gray-700'>
+          <button className='flex items-center space-x-2 text-base font-semibold hover:opacity-80 hover:scale-105 hover:shadow-sm transition-all duration-300 transform text-gray-800'>
             <Download size={16} />
             <span>导出报告</span>
           </button>
